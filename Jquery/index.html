@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+       <script  src="./assets/js/script.js"></script>
+  
+        <title>Form validation-1</title>
+        
+        
+    </head>
+    <body>
+        <!-- container start -->
+        <div class="container bg-light mt-5 border border-3 border-color-black">
+            <div class="text-center">
+                <h2 class="text-primary pt-3">HELLO THERE!</h2>
+
+            </div>
+            <!-- form start -->
+            <form>
+               <div class="row ">
+                    <!-- firstName start -->
+                    <div class="mb-3 col-12 col-md-6 ">
+
+                        <label for="exampleInputEmail1" class="form-label text-dark fw-semibold">First Name</label>
+
+                        <input type="text" class="form-control" id="fName" >
+                        
+                        <span class="text-danger" id="fnameEr"></span>
+                        <span class="text-success" id="fnameSc"></span>
+                    </div>
+                    <!-- firstName end -->
+                    <!-- SecondName start -->
+                    <div class="mb-3 col-12 col-md-6">
+                        
+                        <label for="exampleInputEmail1" class="form-label"  value="Second_Name">Second Name</label>
+
+                        <input type="text" class="form-control" id="sName">
+                        <span class="text-danger" id="snameEr"></span>
+                        <span class="text-success" id="snameSc"></span>
+                    
+                    </div>
+                    <!-- SecondName end
+                    mail start -->
+                    <div class="mb-3 col-12 col-md-6">
+
+                        <label for="exampleInputEmail1" class="form-label">Mail</label>
+
+                        <input type="email" class="form-control " id="email" aria-describedby="emailHelp">
+
+
+                        <span class="text-danger" id="mailEr"></span>
+                        <span class="text-success" id="mailSc"></span>
+                    </div>
+                    <!-- mail end
+                    mobile number input start -->
+                    <div class="mb-3 col-12 col-md-6">
+
+                        <label for="exampleInputEmail1" class="form-label">Number</label>
+
+                        <input type="text" class="form-control " placeholder="+91 00000 00000" id="number" >
+                        <span class="text-danger" id="numEr"></span>
+                        <span class="text-success" id="numSc"></span>
+                        
+
+                    </div>
+                    <!-- mobile number input end
+                    new password input start -->
+                    <div class="mb-3 col-12 col-md-6 "> 
+                        <label for="nPassword" class="form-label">New Password</label>
+
+                        <input type="password" class="form-control " id="nPassword" >
+                        <span class="text-danger" id="npEr"></span>
+                        <span class="text-success" id="npSc"></span>
+                    </div>
+                    <!-- new password input end
+                    conform password input start -->
+                    <div class="mb-3 col-12 col-md-6">
+                        
+                        <label for="cPassword" class="form-label" >Conform Password</label>
+
+                        <input type="password" class="form-control" id="cPassword" >
+                        <span class="text-danger" id="cpEr"></span>
+                        <span class="text-success" id="cpSc"></span>
+                    
+                    </div>
+                    <!-- conform password input start
+                    radio start -->
+                    <div class="mb-3 " id="gender" >
+                        <div>
+                            <p>Gender</p>
+                            <input type="radio"  name="fav" value="Male" >
+                                <label for="html">Male</label>
+                            <input type="radio"  name="fav" value="Female">
+                            <label for="css">Female</label>
+                            <input type="radio"  name="fav" value="Other">
+                            <label for="javascript">Other</label>
+                        </div>
+                        <span class="text-danger" id="gnEr"></span>
+                        <span class="text-success" id="gnSc"></span>   
+                    </div>
+                    <!-- radio end
+                    date input start -->
+                    <div class="mb-3 col-12 col-md-6">
+
+                        <label for="dateInput" class="form-label">Select a Date:</label>
+                        <input type="date" id="dateInput" class="form-control " >
+                        <span class="text-danger" id="dtEr"></span>
+                        <span class="text-success" id="dtSc"></span>
+
+                    </div>
+                    <!-- date input end
+                    country input start -->
+                    <div class="mb-3 col-12 col-md-5 p-auto mt-4 p-2 ms-1" >
+                        <label for="country">Choose Your Country:</label>
+                        <select name="country1" id="country" >
+                            <option value="" disabled selected hidden>--select--</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                            <option value="Lundon">Lundon</option>
+                           
+                        </select><br>
+                        <span class="text-danger" id="cnEr"></span>
+                        <span class="text-success" id="cnSc"></span>
+                        
+                    </div>
+                    <!-- country input end 
+                    checkbox start -->
+                    <div class=" mb-3 col-12">
+                        <div class="form-check">
+                          <input class="form-check-input " type="checkbox" id="check" >
+                          <label class="form-check-label" for="invalidCheck">
+                            I Understand
+                          </label><br>
+                          <span class="text-danger" id="chEr"></span>
+                          <span class="text-success" id="chSc"></span>
+                        </div>
+                    </div>
+                    <!-- checkbox end -->
+                    
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary mb-5" id="hs">Submit</button>
+                    <button type="reset " class="btn btn-primary mb-5 ms-3" >Reset</button>
+                </div>
+            </form>
+            <!-- form end -->
+            <!-- modal start -->
+            <div class="modal" id="successModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Thanks for register</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="modal-body">Your data will stored successfully</p>
+                     
+                    </div>
+                    <div class="modal-footer">
+                      <a href="" type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- model end -->
+        </div>
+        <!-- conatiner end -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
